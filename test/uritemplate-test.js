@@ -1,4 +1,4 @@
-import template from '../lib/url-template';
+import UriTemplate from '../lib/url-template';
 import expect from 'expect.js';
 
 const examples = require('../uritemplate-test/spec-examples-by-section.json');
@@ -6,9 +6,9 @@ const examples = require('../uritemplate-test/spec-examples-by-section.json');
 function createTestContext(c) {
   return function (t, r) {
     if (typeof r === 'string') {
-      expect(template.parse(t).expand(c)).to.eql(r);
+      expect(new UriTemplate(t).expand(c)).to.eql(r);
     } else {
-      expect(r.indexOf(template.parse(t).expand(c)) >= 0).to.be.ok();
+      expect(r.indexOf(new UriTemplate(t).expand(c)) >= 0).to.be.ok();
     }
   };
 }

@@ -1,9 +1,9 @@
-import template from '../lib/url-template';
+import UriTemplate from '../lib/url-template';
 import expect from 'expect.js';
 
 function createTestContext(c) {
   return function (t, r) {
-    expect(template.parse(t).expand(c)).to.eql(r);
+    expect(new UriTemplate(t).expand(c)).to.eql(r);
   };
 }
 
