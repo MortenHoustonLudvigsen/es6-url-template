@@ -1,12 +1,5 @@
-var template, expect;
-
-if (typeof require !== 'undefined') {
-  template = require('../lib/url-template.js');
-  expect = require("expect.js");
-} else {
-  template = window.urltemplate;
-  expect = window.expect;
-}
+import template from '../lib/url-template';
+import expect from 'expect.js';
 
 function createTestContext(c) {
   return function (t, r) {

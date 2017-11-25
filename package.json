@@ -13,8 +13,10 @@
     "url-template"
   ],
   "devDependencies": {
-    "mocha": "=1.6.0",
-    "expect.js": "=0.2.0"
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "expect.js": "^0.2.0",
+    "mocha": "^1.6.0"
   },
   "license": "BSD",
   "repository": {
@@ -26,6 +28,6 @@
     "lib": "./lib"
   },
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec --compilers js:babel-core/register"
   }
 }

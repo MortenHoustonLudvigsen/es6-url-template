@@ -1,14 +1,7 @@
-var template, expect, examples;
+import template from '../lib/url-template';
+import expect from 'expect.js';
 
-if (typeof require !== 'undefined') {
-  template = require('../lib/url-template.js');
-  expect = require("expect.js");
-  examples = require('../uritemplate-test/spec-examples-by-section.json');
-} else {
-  template = window.urltemplate;
-  expect = window.expect;
-  examples = window.examples;
-}
+const examples = require('../uritemplate-test/spec-examples-by-section.json');
 
 function createTestContext(c) {
   return function (t, r) {
