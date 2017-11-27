@@ -1,6 +1,6 @@
 {
   "name": "es6-url-template",
-  "version": "2.0.8",
+  "version": "1.0.0",
   "decription": "A URI template implementation (RFC 6570 compliant)",
   "author": "Bram Stein <b.l.stein@gmail.com> (http://www.bramstein.com)",
   "keywords": [
@@ -21,7 +21,7 @@
   "license": "BSD",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bramstein/url-template.git"
+    "url": "git://github.com/wikibus/es6-url-template.git"
   },
   "main": "./lib/url-template.js",
   "directories": {

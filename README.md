@@ -1,28 +1,22 @@
-## A JavaScript URI template implementation
+## An ES6 URI template implementation
 
 This is a simple URI template implementation following the [RFC 6570 URI Template specification](http://tools.ietf.org/html/rfc6570). The implementation supports all levels defined in the specification and is extensively tested.
 
+This is a fork of `url-template` changed to use ES6 classes and exported as a module.
+
 ## Installation
 
-For use with Node.js you can install it through npm:
-
 ```sh
-$ npm install url-template
-```
-
-If you want to use it in a browser, copy `lib/url-template.js` into your project and use the global `urltemplate` instance. Alternatively you can use [Bower](http://bower.io/) to install this package:
-
-```sh
-$ bower install url-template
+$ yarn add es6-url-template
 ```
 
 ## Example
 
 ```js
-var template = require('url-template');
+import UriTemplate from 'es6-url-template';
 
-var emailUrlTemplate = template.parse('/{email}/{folder}/{id}');
-var emailUrl = emailUrlTemplate.expand({
+const emailUrlTemplate = new UriTemplate('/{email}/{folder}/{id}');
+const emailUrl = emailUrlTemplate.expand({
   email: 'user@domain',
   folder: 'test',
   id: 42
