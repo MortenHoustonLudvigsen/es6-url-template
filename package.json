@@ -27,6 +27,7 @@
   "main": "./url-template.js",
   "module": "./lib/url-template.js",
   "module.root": "./lib",
+  "types": "url-template.d.ts",
   "scripts": {
     "test": "mocha --reporter spec --compilers js:babel-core/register",
     "build": "babel lib --out-dir .",
