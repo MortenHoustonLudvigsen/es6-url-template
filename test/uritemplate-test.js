@@ -1,7 +1,11 @@
-import UriTemplate from '../lib/url-template';
+import UriTemplate from '../url-template.js';
 import expect from 'expect.js';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const examples = require('../uritemplate-test/spec-examples-by-section.json');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const examples = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../uritemplate-test/spec-examples-by-section.json')));
 
 function createTestContext(c) {
   return function (t, r) {

@@ -1,4 +1,4 @@
-import UriTemplate from '../lib/url-template';
+import UriTemplate from '../url-template.js';
 import expect from 'expect.js';
 
 function createTestContext(c) {
